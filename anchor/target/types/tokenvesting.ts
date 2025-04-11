@@ -5,7 +5,7 @@
  * IDL can be found at `target/idl/tokenvesting.json`.
  */
 export type Tokenvesting = {
-  "address": "CRU6xLpQ4Nnte84KMuPvENoXy29ZwUnM2XcwhZtT6kXt",
+  "address": "4VhYNffHiFPYRBia7UrkMs4bWqbX4iYFWCXFhQGsCdds",
   "metadata": {
     "name": "tokenvesting",
     "version": "0.1.0",
@@ -66,16 +66,8 @@ export type Tokenvesting = {
                 ]
               },
               {
-                "kind": "const",
-                "value": [
-                  99,
-                  111,
-                  109,
-                  112,
-                  97,
-                  110,
-                  121
-                ]
+                "kind": "arg",
+                "path": "company"
               }
             ]
           },
@@ -89,16 +81,8 @@ export type Tokenvesting = {
           "pda": {
             "seeds": [
               {
-                "kind": "const",
-                "value": [
-                  99,
-                  111,
-                  109,
-                  112,
-                  97,
-                  110,
-                  121
-                ]
+                "kind": "arg",
+                "path": "company"
               }
             ]
           },
@@ -160,7 +144,8 @@ export type Tokenvesting = {
           "signer": true
         },
         {
-          "name": "tokenProgram"
+          "name": "tokenProgram",
+          "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
         },
         {
           "name": "systemProgram",
@@ -203,49 +188,7 @@ export type Tokenvesting = {
         },
         {
           "name": "treasuryTokenAccount",
-          "writable": true,
-          "pda": {
-            "seeds": [
-              {
-                "kind": "const",
-                "value": [
-                  116,
-                  111,
-                  107,
-                  101,
-                  110,
-                  118,
-                  101,
-                  115,
-                  116,
-                  105,
-                  110,
-                  103,
-                  95,
-                  116,
-                  114,
-                  101,
-                  97,
-                  115,
-                  117,
-                  114,
-                  121
-                ]
-              },
-              {
-                "kind": "const",
-                "value": [
-                  99,
-                  111,
-                  109,
-                  112,
-                  97,
-                  110,
-                  121
-                ]
-              }
-            ]
-          }
+          "writable": true
         },
         {
           "name": "employeeAccount",
@@ -393,7 +336,8 @@ export type Tokenvesting = {
           "address": "11111111111111111111111111111111"
         },
         {
-          "name": "tokenProgram"
+          "name": "tokenProgram",
+          "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
         }
       ],
       "args": [
@@ -480,6 +424,10 @@ export type Tokenvesting = {
           {
             "name": "cliffTime",
             "type": "i64"
+          },
+          {
+            "name": "company",
+            "type": "string"
           },
           {
             "name": "tokenvestingAccount",
